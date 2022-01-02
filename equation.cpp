@@ -19,7 +19,8 @@ long double Equation::evaluate() {
 
         if ((this->equation[i] >= '0' && this->equation[i] <= '9') || this->equation[i] == '.') {
             std::stringstream buffer;
-            while (i < this->equation.length() && ((this->equation[i] >= '0' && this->equation[i] <= '9') || this->equation[i] == '.')) {
+            while (i < this->equation.length() && ((this->equation[i] >= '0' &&
+                  this->equation[i] <= '9') || this->equation[i] == '.')) {
                 buffer << this->equation[i++];
             }
             values.push(std::stold(buffer.str()));
@@ -44,7 +45,8 @@ long double Equation::evaluate() {
             operators.pop();
         }
 
-        else if (this->equation[i] == '+' || this->equation[i] == '-' || this->equation[i] == '*' || this->equation[i] == '/') {
+        else if (this->equation[i] == '+' || this->equation[i] == '-' ||
+                this->equation[i] == '*' || this->equation[i] == '/') {
             while (!operators.empty() && hasPrecedence(this->equation[i], operators.top())) {
                 char op = operators.top();
                 operators.pop();
