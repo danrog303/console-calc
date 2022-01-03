@@ -1,6 +1,7 @@
 #ifndef CONSOLE_CALC_EQUATION_H
 #define CONSOLE_CALC_EQUATION_H
 #include <stack>
+#include <algorithm>
 #include <sstream>
 #include <string>
 #include <utility>
