@@ -2,6 +2,7 @@
 
 Equation::Equation(std::string equation) {
     this->equation = std::move(equation);
+    std::replace(this->equation.begin(), this->equation.end(), ',', '.');
 }
 
 std::string Equation::getEquation() {
@@ -46,7 +47,7 @@ long double Equation::evaluate() {
         }
 
         else if (this->equation[i] == '+' || this->equation[i] == '-' ||
-                this->equation[i] == '*' || this->equation[i] == '/') {
+                 this->equation[i] == '*' || this->equation[i] == '/') {
             while (!operators.empty() && hasPrecedence(this->equation[i], operators.top())) {
                 char op = operators.top();
                 operators.pop();
