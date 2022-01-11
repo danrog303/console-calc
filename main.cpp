@@ -4,6 +4,7 @@
 #include "cli.h"
 
 using namespace std;
+// main function
 int main(int argc, char** argv) {
     // invalid arguments count
     if(argc >= 3) {
