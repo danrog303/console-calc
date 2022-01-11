@@ -1,5 +1,4 @@
 #include "help.h"
-using namespace std;
 
 void help(){
 std::cout<<"***console-calc***\n";
