@@ -11,7 +11,7 @@ int main(int argc, char** argv) {
         std::cout << "Type console-calc --help to learn how to use console-calc.";
     }
     // help message (-h)
-    else if(argc == 2 && (string(argv[1]) == "--help" || string(argv[1]) == "-h")) {
+    else if(argc == 2 && (std::string(argv[1]) == "--help" || std::string(argv[1]) == "-h")) {
         help();
     }
     // cli mode (no arguments)
